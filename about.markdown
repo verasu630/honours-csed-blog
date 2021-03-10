@@ -1,18 +1,17 @@
 ---
-layout: page
+layout: post
 title: About
+author: Vera Su
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello! Welcome to my blog. This is where I will share any thoughts from
+my research into computing education, creative computing and music education
+in preparation for my Honours thesis.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+If anything here interests you, feel free to reach out via [email][1].
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+To find out more about my supervisor and their work, visit the [c/c/c studio website][2].
 
-
-[jekyll-organization]: https://github.com/jekyll
+[1]: <vera0630@gmail.com>
+[2]: <https://cs.anu.edu.au/code-creativity-culture/>
