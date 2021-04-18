@@ -6,7 +6,7 @@ author: "Vera Su"
 tags: workshop, curriculum
 ---
 
-### Last updated: April 16 2021
+### Last updated: April 19 2021
 
 Please excuse the improper citation format.
 
