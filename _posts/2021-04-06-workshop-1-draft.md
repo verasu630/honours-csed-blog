@@ -6,7 +6,7 @@ author: "Vera Su"
 tags: workshop, curriculum
 ---
 
-### Last updated: April 14 2021
+### Last updated: April 16 2021
 
 Please excuse the improper citation format.
 
@@ -14,80 +14,129 @@ Please excuse the improper citation format.
 
 # Introduction
 
-Welcome to the first Music Computing Workshop! Today, we will focus on familiarising you with the BBC Microbit and some of its features. Don't be intimidated by this, it's just like sheet music but instead of the sheet music telling you what to do, you are using  sheet music to tell the Microbit what to do.
+Welcome to the first Music Computing Workshop! Today, we will focus on familiarising you with the BBC Microbit and some of its features. Don't be intimidated by this, it's just like sheet music but instead of the sheet music telling you what to do, you are using sheet music to tell the Microbit what to do.
 
 Feel free to discuss your thoughts with your peers at any point, or even speak up if you have questions! This is your chance to try out the Microbit and see if it can help you create cool music.
 
-# Task 1 - Different Parts of the Microbit
+# Task 0 - Different Parts of the Microbit
 
-Take a look at this photo of the Microbit. There are several different pieces. 2 buttons, an accelerometer, microphone, speaker and an LED screen. There's also the slots for battery, a USB port and a reset button. Look at the labeled images below and try and find each of these features.
+The Microbit is made up of many little bits and pieces. Take a look at the labeled images below and try and find each of these features on your own device.
 
+![Labelled diagram of the BBC Microbit](../assets/microbit-labelled.png)
 
+Also just a quick explanation on some words I'll be using, when I say Microbit, I'm referring to the little device you're holding, and when I say MakeCode, that's the coding language you'll be using to control the Microbit!
+
+*Note: Should I preload some interactions so that as the students experiment, the Microbit is already responding?*
+
+*Eg. "Some secret sounds have been hidden in them, so play around and see if you can find the hidden sounds"*
+
+# Task 1 - MakeCode
+
+To get started with coding, you need to go onto the MakeCode website. The link to it is [here](https://makecode.microbit.org/).
+
+You can create a new project by clicking on "New Project" and giving your project a name.
 
 # Task 2 - Hello World!
 
 Let's get started with coding straight away! The first step of any programmer's journey is displaying Hello World on the screen, but let's switch it up a bit!
 
+*Livecoding*
 On your screen, you should have two *instructions*, play middle C for 1 beat and play middle D for one B. When your program reaches these instructions, it will *execute* them (aka do as it says). We also have a block called "on start". This means whenever the Microbit starts, it will do whatever you've put inside it.
 
 So let's start by dragging the two instructions into the "on start" block. You can see if it works by clicking the start button and asking MakeCode to "play your code".
 
-Time to experiment a little bit: Try to make the Microbit sing middle C and middle D three times!
+Time to experiment a little bit: Can you use the play tone instruction to make the Microbit sing a little tune?
 
 # Task 3 - Functions?
 
-If you're thinking, "hmm, that doesn't seem very efficient" then you're right! We essentially have a sequence of middle C and middle D, so why not combine it into just one instruction and reduce the lines of code by half?
+Let's take a quick detour to look at song lyrics. Think about a song that you like and how you might write down the lyrics for someone else (assuming you would have to do this by hand and don't have copy paste).
 
-On your screen, you should now an empty "function" block. When the program *calls* a function, the function will execute the instructions in that block. To *call* a function, we also need to give it a name. Let's call it beepBoop for now.
+*Can replace with a more curriculum appropriate/relevant song*
 
-Now, you can make it sing middle C and middle D by dragging those instructions into the block, and then calling beepBoop in the "on start" block. Finally, you can call beepBoop (try to find this block yourself) three times to get the same effect as in Task 2, but with less code!
+*This would probably be a live demonstration?*
 
-# Task 4 - Conditionals
+For example, here we have the chorus and pre-chorus of Sugar by Maroon 5.
 
-Let's take a quick detour to talk about conditional statements. Don't be afraid of them! They're basically written flow charts.
+| Pre-chorus                               |  Chorus                                         |
+|:----------------------------------------:|:-----------------------------------------------:|
+| I don't wanna be needing your love       | Sugar, yes please                               |
+| I just wanna be deep in your love        | Won't you come and put it down on me?           |
+| And it's killing me when you're away     | I'm right here, 'cause I need                   |
+| Ooh baby                                 | Little love, a little sympathy                  |
+| 'Cause I really don't care where you are | Yeah, you show me good loving, make it alright  |
+| I just wanna be there where you are      | Need a little sweetness in my life              |
+| And I gotta get one little taste         | Your sugar, yes please                          |
+|                                          | Won't you come and put it down on me?           |
 
-Is it 5 o'clock? If yes then it's time to go home, otherwise I'm still in class.
+<br />
+Now try singing the song! I've given you the lyrics here.
 
-Is it cold outside? If yes then I will wear my jacket.
+---
+<center>
+I'm hurting baby, I'm broken down<br />
+I need your loving, loving I need it now<br />
+When I'm without you, I'm something weak<br />
+You got me begging, begging I'm on my knees<br />
+<br />
 
-x = 5? If yes then I will do this, otherwise I will do something else.
+(Pre-chorus)<br />
 
-Now let's look at MakeCode again, you should see an empty If block a variable called number storing the number 5. In programming, a variable is basically a box that stores anything (a number, a sentence, a letter etc.)
+(Chorus)
+</center>
+---
 
-All you have to do is fill in the blanks
+How did you do it? Did you sing the words chorus and pre-chorus? Of course not, you knew that you should look back at the lyrics I gave before and use the lyrics there. Even if you didn't know the lyrics beforehand, you would be able to sing this song. 
 
-Can you figure out how to make the Microbit sing beepBoop only when number is equal to 5?
-Hint: Look under the comparison section of Logic.
+We have *defined* what chorus means in the table, and so when we make a reference to chorus later, we can jump to where we wrote down the lyrics to the chorus and follow that, before we go back to sing the rest of the song. If we called chorus something nonsensical, like potato, you would still be able to follow.
 
-Now to spice it up a little more, you can click the little plus button to create another empty block which will tell the computer what to do when number does not equal 5 (the otherwise part of a flow chart). Can you make it so that it sings boopBeep instead? You will need to make a new function for this as well.
+But why did we write it like this? Because writing down the lyrics to the pre-chorus and chorus 3 or 4 different times when they are exactly the same is painful.
+
+Congratulations! You now know how functions work. It's the same thing, except instead of lyrics we give the computer other instructions. That way, we basically have a shorthand way of calling this thing over and over again without having to rewrite it every single time.
+
+Let's try and do this with the Microbit now with the Super Mario theme song. I've given you the basic sheet music here. Can you figure out how to make this song in MakeCode with the help of functions?
+
+![Super Mario theme sheet music](..\assets\smb-sheet-music.png)
+
+*Should I teach conditionals here instead so that it is easier to teach parameters? (eg. One line difference so use an if to determine version a or b)*
+
+*May have to move parameters to workshop 2*
+
+# Task 4 - Now with parameters
+
+So what happens then, when you have a chorus that changes slightly, but is otherwise the same? Do you have rewrite the lyrics each time just for the minor change? Nope! Functions also have another thing called *parameters*, so you can pass it information that it might need to know.
+
+An example is Old MacDonald Had A Farm. It's basically just chorus, over and over again but with minor changes each time. I've given the lyrics. See if you can figure out how to sing the song correctly with this information.
 
 
-# Task 5 - Repeats?
+| Chorus                                   |
+|:----------------------------------------:|
+| Old MacDonald had a farm                 |
+| Ee i ee i o                              |
+| And on his farm he had some [animal]     |
+| With a [sound] [sound] here              |
+| And a [sound] [sound] there              |
+| Here a [sound]                           |
+| There a [sound]                          |
+| Everywhere a [sound] [sound]             |
+| Old MacDonald had a farm                 |
+| Ee i ee i o                              |
 
-Looking back at our original code, we're still repeating call beepBoop three times. Surely there's another way to shorten this?
+<br />
 
-Introducing loops! MakeCode has an easy repeating block. Try using that to call beepBoop three times instead.
+`Chorus(cows, moo)`
 
-Next let's look deeper into the repeat block. How does it work? Well you start with a variable, which counts up for us. Each time we repeat, we also increase our counter by 1 until we reach the number of times we want to repeat (in this case 3).
+`Chorus(chicks, cluck)`
 
-Interesting note here, most programming starts counting at 0, not at one (this includes make code). So if we want to play something a total of 3 times, we should be counting from 0 to 2, not 0 to 3!
+`Chorus(pigs, oink)`
 
-Can you figure out how to call beepBoop 3 times using the for block instead?
+Similar to how you could figure out how to read the lyrics before, you knew how to fill in the blanks that I left in the chorus "function". That's basically all parameters are!
 
-# Task 6 - Putting it all together
-
-Amazing work today! To finish it all off I have a challenge for you. Pick a segment of any song that you like and try to make the Microbit sing! If you notice your code is being repeated, you can try using functions or loops to simplify.
-
-If you're stuck for a song, try: The Swan by Saint-Saens.
+Now let's try to put it into practice with an [exercise].
 
 *** 
-
-## Random notes and thoughts
-
-- Should I convert each task to be livecoding -> the students try?
-- Add an extra task to explain lists and repeats part 2?
 
 ## References
 1. [10 Quick Tips for teaching programming](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006023)
 2. [COMP2300 Intro Lab](https://cs.anu.edu.au/courses/comp2300/labs/01-intro/)
 3. [Functions first](https://www.researchgate.net/publication/305221737_The_teaching_of_functions_as_the_first_step_to_learn_imperative_programming)
+4. [Code.org](https://www.youtube.com/watch?v=QuIMLel1mmw)
